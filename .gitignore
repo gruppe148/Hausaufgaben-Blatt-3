@@ -1,6 +1,9 @@
 .DS_Store
 *pdf
 *\.class
+resources/
+mediadateien/
+iste/
 tex/*.aux
 tex/*.log
 tex/*.pdf
@@ -8,3 +11,4 @@ tex/*.pyg
 tex/*.stdout
 tex/*.stderr
 tex/script.sh
+

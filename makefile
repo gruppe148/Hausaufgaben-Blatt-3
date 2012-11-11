@@ -2,9 +2,10 @@ JAVAC=javac
 JAVA=java
 JCFLAGS=
 JRFLAGS=
-export openout_any=a
 TEX=xelatex
 TEXFLAGS=--shell-escape --output-directory=tex
+
+export openout_any=a
 
 all:
 	$(JAVAC) $(JCFLAGS) $(JFLAGS) PSE_2012_U_3_Sl_19_Grp_148.java
@@ -14,11 +15,9 @@ run:
 pdf:
 	mint_project
 	$(TEX) $(TEXFLAGS) ./tex/PSE_2012_U_3_Sl_19_Grp_148.tex
-	rm PSE_2012_U_3_Sl_19_Grp_148.pyg
 open-pdf:
 	mint_project
 	$(TEX) $(TEXFLAGS) ./tex/PSE_2012_U_3_Sl_19_Grp_148.tex && open ./tex/PSE_2012_U_3_Sl_19_Grp_148.pdf
-	rm PSE_2012_U_3_Sl_19_Grp_148.pyg
 doc:
 	javadoc *.java -d ./doc
 clean:
